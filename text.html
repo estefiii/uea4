@@ -5,14 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>entidad texto</title>
     <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
-
 </head>
 <body>
     <a-scene>
-        <a-entity
-            text="value: CHROMAKOPIA; color: black" position="0 1 -1">
-            <a-sky color="#178735"></a-sky>
-          </a-entity>
-        </a-scene>
+        <a-sky color="black"></a-sky>
+            <a-text value="hola bb" font="assets/fonts/Super Shiny-msdf.json" font-image="assets/fonts/SuperShiny.png" negate="false" color="white" scale="2 2 1" position="-2 2 -4"></a-text>
+
+            <a-entity text="value: MI TEXTO va aqui, tiene acentos y eñes\n simbolos como ampersan &; font: assets/fonts/Super Shiny-msdf.json; fontImage:assets/fonts/SuperShiny.png; negate:false; color:red; letterSpacing:4; width:15" scale="2 2 1" position="0.5 2 -.5"></a-entity>
+    </a-scene>
 </body>
 </html>
