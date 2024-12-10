@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>video</title>
+    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+</head>
+<body>
+
+    <!--script-->
+    <script>
+        AFRAME.registerComponent('play-pause',{
+            init: function (){
+                var myVideo = document.querySelector('#Sabrina');
+                var VideoControls = document.querySelector('#videoControls');
+                this.el.addEventListener('click', function(){
+                    if(myVideo.paused){
+                        myVideo.play();
+                        VideoControls.setAttribute('src', '#pause');
+                    } else {
+                        myVideo.pause();
+                        VideoControls.setAttribute('src', '#play');
+                    }
+                });
+            }
+        });
+    </script>
+
+    <!--assets-->
+    <a-scene  background="color:#96daff">
+        <a-assets>
+            <img id="pause" src="assets/pause.png" position="-2 0 -30" width="2" height="2">
+            <img id="play" src="assets/play.png" position="2 0 -30" width="2" height="2">
+            <video id="Sabrina" loop="true" src="assets/Sabrina.mp4"></video>
+        </a-assets>
+
+    <!--camara-->
+        <a-camera>
+            <a-cursor></a-cursor>
+        </a-camera>
+
+    <!--video iamgenes-->
+        <a-video src="#Sabrina" width="16" height="9" position="0 0 -20"></a-video>
+
+        <!-- Botón para controles -->
+        <a-image>
+            <id="videoControls" src="#play" position="0 0 -30" width="2" height="2" play-pause>
+            <!--id="videoControls" src="#pause" position="0 1 -5" width="2" height="2" play-pause-->
+        </a-image>
+
+    </a-scene>
+
+</body>
+</html>
