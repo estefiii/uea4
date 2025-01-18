@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neoterra</title>
+    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.5.2/dist/aframe-extras.min.js"></script>
+
+</head>
+<body>
+    <a-scene>
+        <a-entity environment="preset: starry; skyType: gradient; skyColor: #d1d0cd; horizonColor: black; lighting:point; fog:.7; stageSize:200; playArea: 1; ground: spikes; groundColor: black; gridColor: #00FF00; grid: 1x1; groundYScale: 5; dressing: cubes; dressingAmount: 15; dressingColor: black; dressingScale: 3; dressingVariance: 5 3 10; dressingUniformScale: false;  "></a-entity>
+
+        <a-entity id="rig" movement-controls="controls: checkpoint, gamepad, trackpad, keyboard, nipple;" position="0 0 20">
+        <a-entity camera
+          position="0 4 0"
+          look-controls="pointerLockEnabled: true">
+          <a-cursor></a-cursor>
+        </a-entity>
+        </a-entity>
+
+        <a-text value="Este es el espacio entre lo virtual y lo real" font="assets/Retro-msdf.json" font-image="assets/Retro.png" negate="false" color="#00FF00" scale="7 7 5" position="-15 5 0" shader="black" ></a-text>
+
+        <a-text value="Recuerda..." font="assets/Retro-msdf.json" font-image="assets/Retro.png" negate="false" color="#00FF00" scale="10 10 5" position="-61 15 -25" shader="black" ></a-text>
+        <a-text value="Recuerda..." font="assets/Retro-msdf.json" font-image="assets/Retro.png" negate="false" color="#00FF00" scale="10 10 5" position="61 15 -15" shader="black" ></a-text>
+        <a-text value="Recuerda..." font="assets/Retro-msdf.json" font-image="assets/Retro.png" negate="false" color="#00FF00" scale="10 10 5" position="41 25 -25" shader="black" ></a-text>
+
+
+        <a-text value="ERROR" font="assets/Retro-msdf.json" font-image="assets/Retro.png" negate="false" color="#00FF00" scale="18 17 15" position="11 15 -20" shader="black" ></a-text>
+        <a-text value="ERROR" font="assets/Retro-msdf.json" font-image="assets/Retro.png" negate="false" color="#00FF00" scale="18 17 15" position="31 25 -40" shader="white" ></a-text>
+        <a-text value="ERROR" font="assets/Retro-msdf.json" font-image="assets/Retro.png" negate="false" color="#00FF00" scale="18 17 15" position="-15 35 -40" shader="black" ></a-text>
+        <a-text value="ERROR" font="assets/Retro-msdf.json" font-image="assets/Retro.png" negate="false" color="#00FF00" scale="18 17 15" position="-70 3 -15" shader="black" ></a-text>
+        <a-text value="ERROR" font="assets/Retro-msdf.json" font-image="assets/Retro.png" negate="false" color="#00FF00" scale="18 17 15" position="61 13 -25" shader="black" ></a-text>
+            
+        <a-box src="assets/code.jpg" material="color:white" position="5 18 -5" rotation="0 45 45" scale="2 2 2" animation="property: object3D.position.x; to: 2.2; dir: alternate; dur: 2000; loop: true"></a-box>
+        <a-box src="assets/code2.jpg" material="color:white" position="-16 11 2" rotation="0 45 45" scale="3 3 3" animation="property: object3D.position.x; to: 2.2; dir: alternate; dur: 4000; loop: true"></a-box>
+        <a-box src="assets/error.jpg" material="color:white" position="15 8 5" rotation="0 45 45" scale="2 2 2" animation="property: object3D.position.x; to: 2.2; dir: alternate; dur: 6000; loop: true"></a-box>
+
+        <a-box src="assets/code.jpg" material="color:white" position="-5 2 5" rotation="0 45 45" scale="2 2 2" animation="property: object3D.position.x; to: 2.2; dir: alternate; dur: 7000; loop: true"></a-box>
+        <a-box src="assets/code2.jpg" material="color:white" position="19 31 -3" rotation="0 45 45" scale="3 3 3" animation="property: object3D.position.x; to: 2.2; dir: alternate; dur: 8000; loop: true"></a-box>
+        <a-box src="assets/error.jpg" material="color:white" position="-35 20 0" rotation="0 45 45" scale="2 2 2" animation="property: object3D.position.x; to: 2.2; dir: alternate; dur: 9000; loop: true"></a-box>
+
+        <a-box src="assets/code.jpg" material="color:white" position="15 18 21" rotation="0 45 45" scale="2 2 2" animation="property: object3D.position.y; to: 2.2; dir: alternate; dur: 5000; loop: true"></a-box>
+        <a-box src="assets/code2.jpg" material="color:white" position="-16 11 8" rotation="0 45 45" scale="3 3 3" animation="property: object3D.position.y; to: 2.2; dir: alternate; dur: 3000; loop: true"></a-box>
+        <a-box src="assets/error.jpg" material="color:white" position="15 8 15" rotation="0 45 45" scale="2 2 2" animation="property: object3D.position.y; to: 2.2; dir: alternate; dur: 2000; loop: true"></a-box>
+
+        <a-box src="assets/code.jpg" material="color:white" position="-5 2 25" rotation="0 45 45" scale="2 2 2" animation="property: object3D.position.y; to: 2.2; dir: alternate; dur: 4000; loop: true"></a-box>
+        <a-box src="assets/code2.jpg" material="color:white" position="19 31 3" rotation="0 45 45" scale="3 3 3" animation="property: object3D.position.y; to: 2.2; dir: alternate; dur: 6000; loop: true"></a-box>
+        <a-box src="assets/error.jpg" material="color:white" position="-35 20 30" rotation="0 45 45" scale="2 2 2" animation="property: object3D.position.y; to: 2.2; dir: alternate; dur: 10000; loop: true"></a-box>
+
+        <!--script-->
+    <script>
+        AFRAME.registerComponent('play-pause',{
+            init: function (){
+                var myVideo = document.querySelector('#pasto');
+                var VideoControls = document.querySelector('#videoControls');
+                this.el.addEventListener('click', function(){
+                    if(myVideo.paused){
+                        myVideo.play();
+                        VideoControls.setAttribute('src', '#pause');
+                    } else {
+                        myVideo.pause();
+                        VideoControls.setAttribute('src', '#play');
+                    }
+                });
+            }
+        });
+    </script>
+
+<script>
+    AFRAME.registerComponent('play-pause',{
+        init: function (){
+            var myVideo = document.querySelector('#sol');
+            var VideoControls = document.querySelector('#videoControls');
+            this.el.addEventListener('click', function(){
+                if(myVideo.paused){
+                    myVideo.play();
+                    VideoControls.setAttribute('src', '#pause');
+                } else {
+                    myVideo.pause();
+                    VideoControls.setAttribute('src', '#play');
+                }
+            });
+        }
+    });
+</script>
+
+    <!--assets-->
+        <a-assets>
+            <video id="pasto" autoplay loop="true" src="assets/pasto.mp4"></video>
+            <video id="sol" autoplay loop="true" src="assets/sol.mp4"></video>
+        </a-assets>
+
+        <!--video iamgenes-->
+        <a-video src="#pasto" width="32" height="18" position="30 25 -40"></a-video>
+        <a-video src="#sol" width="32" height="18" position="-35 25 -25"></a-video>
+    </a-scene>
+    
+</body>
+</html>
